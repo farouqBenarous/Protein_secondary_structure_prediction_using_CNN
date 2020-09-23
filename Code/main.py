@@ -24,10 +24,11 @@ if __name__ == '__main__':
     # ---------------- Training / testing / infer the models ---------------#
 
     # Training
-    print("Alexnet Model is being called ")
+    print("CNN  Model is being called for training  ")
     CnnModel.train_CNN_model_V1(X_train, y_train,
                                 {'sequence_len': sequence_len, 'amino_acid_residues': amino_acid_residues,
                                  'num_classes': num_classes})
 
     # Testing
-    CnnModel.test(X_test, y_test, "alexNetV2.h5")
+    print("CNN  Model is being called for testing ")
+    CnnModel.test(X_test, y_test, "cnnV1.h5")

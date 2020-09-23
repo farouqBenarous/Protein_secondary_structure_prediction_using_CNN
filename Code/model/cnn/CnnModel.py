@@ -22,7 +22,6 @@ def train_CNN_model_V1(X, Y, dataset_meta_data):
 
     # model.add(Dense(1, activation='softmax'))
     model.add(Conv1D(dataset_meta_data["num_classes"], 11, padding='same', activation='softmax'))  #
-    model.add(Dense(1, activation='softmax'))
     model.summary()
 
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy', 'mae'])
