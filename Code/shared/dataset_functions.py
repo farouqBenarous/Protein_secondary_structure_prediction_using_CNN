@@ -3,8 +3,7 @@ import gzip
 
 
 def load_dataset(dataset_path, dataset_meta_data):
-    compressed = gzip.GzipFile(dataset_path, "r")
-    ds = np.load(compressed)
+    ds = np.load(dataset_path)
     ds = np.reshape(ds, (ds.shape[0], dataset_meta_data['sequence_len'], dataset_meta_data['total_features']))
     ret = np.zeros(
         (ds.shape[0], ds.shape[1], dataset_meta_data['amino_acid_residues'] + dataset_meta_data['num_classes']))

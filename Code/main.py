@@ -13,7 +13,8 @@ if __name__ == '__main__':
     # ---------------- Data loading , processing ---------------#
 
     print("loading the data ...")
-    dataset = load_dataset("../dataset/cullpdb+profile_6133.npy.gz")
+    dataset = load_dataset("../dataset/cullpdb+profile_6133.npy.gz",{'sequence_len': sequence_len, 'amino_acid_residues': amino_acid_residues,
+                                 'num_classes': num_classes,'total_features':total_features})
 
     print("preprocessing the data ...")
     X, Y = read_and_process(dataset,{'sequence_len': sequence_len, 'amino_acid_residues': amino_acid_residues,
