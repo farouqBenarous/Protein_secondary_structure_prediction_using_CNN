@@ -7,12 +7,17 @@
   
   
 ### How  Run ?
+* install Paycharm Link : https://www.jetbrains.com/help/pycharm/installation-guide.html#silent
 * After you down load the data from the link in the dataset folder 
+
 * Install python3 on your machine , Link for the python3 
 https://www.python.org/downloads/release/python-379/
+
 * install pip (python package manager) , link for pipe 
 https://phoenixnap.com/kb/install-pip-windows
+
 * Enter to the directory of the repo and install all the dependencies specified  above using this  : 
 ` pip install --user -r requirements.txt `
+
 * run the main file using ` python3 main.py` 
 This will run the training / test 
